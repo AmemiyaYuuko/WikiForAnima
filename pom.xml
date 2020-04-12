@@ -18,6 +18,8 @@
         <module>wiki_web_manager</module>
         <module>wiki_common_cas</module>
         <module>wiki_web_center</module>
+        <module>wiki_service_history</module>
+        <module>wiki_web_history</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>
