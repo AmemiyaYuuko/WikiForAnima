@@ -1,0 +1,5 @@
+org\wiki\controller\baseException.class
+org\wiki\utils\HttpInterceptor.class
+org\wiki\utils\JWTUtils.class
+org\wiki\config\swaggerConfig.class
+org\wiki\utils\HeaderTokenInterceptor.class

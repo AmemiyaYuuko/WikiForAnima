@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wiki_web_portal" />
+        <module name="wiki_common_service" />
+        <module name="wiki_common_interface" />
+        <module name="wiki_common" />
+        <module name="wiki_web_manager" />
+        <module name="wiki_service_goods" />
+        <module name="wiki_common_cas" />
+        <module name="wiki_common_web" />
+        <module name="wiki_service_animation" />
+        <module name="wiki_web_center" />
+        <module name="wiki_pojo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wiki_web_protal" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
