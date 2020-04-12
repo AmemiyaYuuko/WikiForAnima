@@ -10,7 +10,7 @@ import org.wiki.service.IAnimationService;
 import java.util.List;
 
 @Controller
-@RequestMapping("/animPortal")
+@RequestMapping("/portal")
 public class TAnimationController {
     @Reference
     private IAnimationService animationService;
