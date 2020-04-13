@@ -10,7 +10,7 @@ import java.util.Map;
 public interface IAnimationService {
    //查询动漫信息列表
    public List<Wiki_Animation> getAnimList();
-   //根据id查询动漫列表
+   //根据id查询动漫
    public Wiki_Animation getAnimById(Integer id);
    //根据动漫名以及标签查询动漫信息
    public List<Wiki_Animation> getAnimByNameAndLabel(Map<String,Object> queryMap);
@@ -30,7 +30,9 @@ public interface IAnimationService {
    //增加一条动漫信息
    public Integer addAnimationInfo(Wiki_Animation animation);
    //修改动漫信息
-   public Integer modifyAnimationInfo(Wiki_Animation animation);
+   public Integer modifyAnimationInfo(Wiki_Animation animation,Integer userId);
    //根据id删除动漫信息
    public Integer deleteAnimation(Integer id);
+   //根据id修改动漫信息的状态
+   public Integer modifyAnimationStatus(Integer id,Integer status);
 }

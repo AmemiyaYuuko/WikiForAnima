@@ -1,2 +1,4 @@
+org\wiki\serviceimpl\ReportServiceImpl.class
+org\wiki\mapper\ReportMapper.class
 org\wiki\mapper\AnimationMapper.class
 org\wiki\serviceimpl\AnimationServiceImpl.class

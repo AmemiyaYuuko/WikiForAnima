@@ -1,4 +1,6 @@
 org\wiki\entity\ResponseData.class
-org\wiki\entity\ResponseCode.class
+org\wiki\pojo\Wiki_Report.class
 org\wiki\pojo\Wiki_Animation.class
+org\wiki\pojo\AnimationHistory.class
+org\wiki\entity\ResponseCode.class
 org\wiki\entity\Brand.class

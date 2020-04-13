@@ -1,5 +1,6 @@
 package org.wiki.serviceimpl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -7,9 +8,13 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.wiki.mapper.AnimationMapper;
+import org.wiki.pojo.AnimationHistory;
 import org.wiki.pojo.Wiki_Animation;
 import org.wiki.service.IAnimationService;
+import org.wiki.service.IHistoryService;
 
+import javax.xml.crypto.Data;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +24,8 @@ import java.util.Map;
 public class AnimationServiceImpl implements IAnimationService {
     @Autowired
     AnimationMapper animationMapper;
-
+    @Reference
+    IHistoryService historyService;
     /**
      * 获取所有动漫信息的列表
      *
@@ -80,17 +86,36 @@ public class AnimationServiceImpl implements IAnimationService {
 
     @Override
     public Integer addAnimationInfo(Wiki_Animation animation) {
+
         return animationMapper.insert(animation);
     }
 
     @Override
-    public Integer modifyAnimationInfo(Wiki_Animation animation) {
-        return animationMapper.updateById(animation);
+    public Integer modifyAnimationInfo(Wiki_Animation animation,Integer userId) {
+        AnimationHistory history=new AnimationHistory(animation.getAnimationId(),animation.getAnimationName(),
+                animation.getAnimationLabel(),animation.getAnimationTime(),animation.getAnimationImg(),
+                animation.getAnimationLink(),animation.getAnimationVoiceactor(),animation.getAnimationIntroduce(),
+                animation.getAnimationStaff(),userId,new Date());
+        Integer success=0;
+        System.out.println(history);
+        System.out.println(historyService);
+        success=historyService.insertAnimationHistory(history);
+        if(success==1){
+            success=animationMapper.updateById(animation);
+        }
+        return success;
     }
 
     @Override
     public Integer deleteAnimation(Integer id) {
         return animationMapper.deleteById(id);
+    }
+
+    @Override
+    public Integer modifyAnimationStatus(Integer id, Integer status) {
+        Wiki_Animation animation=getAnimById(id);
+        animation.setAnimationStatus(status);
+        return animationMapper.updateById(animation);
     }
 
     /**

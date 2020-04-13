@@ -1,2 +1,4 @@
+org\wiki\service\IHistoryService.class
 org\wiki\service\IBrandService.class
 org\wiki\service\IAnimationService.class
+org\wiki\service\IReportService.class

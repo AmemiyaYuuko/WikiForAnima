@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [13/Apr/2020:09:06:41 +0800] "GET /swagger-resources/configuration/ui HTTP/1.1" 200 496 http-bio-9001-exec-1 138
+0:0:0:0:0:0:0:1 - - [13/Apr/2020:09:06:41 +0800] "GET /swagger-resources HTTP/1.1" 200 90 http-bio-9001-exec-2 136
+0:0:0:0:0:0:0:1 - - [13/Apr/2020:09:06:42 +0800] "GET /v2/api-docs HTTP/1.1" 200 14001 http-bio-9001-exec-3 152
+0:0:0:0:0:0:0:1 - - [13/Apr/2020:09:11:08 +0800] "GET /animation/animList HTTP/1.1" 200 37796 http-bio-9001-exec-6 1248
+0:0:0:0:0:0:0:1 - - [13/Apr/2020:09:30:32 +0800] "GET /webjars/bycdao-ui/ace-editor/worker-json.js HTTP/1.1" 304 - http-bio-9001-exec-8 10

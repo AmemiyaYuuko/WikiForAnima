@@ -2,14 +2,13 @@ package org.wiki.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.*;
 import org.wiki.entity.ResponseData;
 import org.wiki.pojo.Wiki_Animation;
+import org.wiki.pojo.Wiki_Report;
 import org.wiki.service.IAnimationService;
+import org.wiki.service.IReportService;
 
 import java.util.Date;
 import java.util.List;
@@ -22,7 +21,8 @@ import java.util.Map;
 public class AnimationController {
     @Reference
     private IAnimationService animationService;
-
+    @Reference
+    private IReportService reportService;
     /**
      * 查询所有的动漫信息
      *
@@ -215,9 +215,12 @@ public class AnimationController {
      */
     @PostMapping("/modifyAnimation")
     @ApiOperation(value = "修改动漫信息", notes = "修改动漫信息")
-    @ApiImplicitParam(value = "动漫信息", name = "animation", required = true, dataType = "Wiki_Animation", paramType = "body")
-    public ResponseData<Wiki_Animation> modifyAnimation(@RequestBody Wiki_Animation animation) {
-        Integer success = animationService.modifyAnimationInfo(animation);
+    @ApiImplicitParams({
+            @ApiImplicitParam(value = "动漫信息", name = "animation", required = true, dataType = "Wiki_Animation", paramType = "body"),
+            @ApiImplicitParam(value = "用户ID", name = "userId", required = true, dataType = "Integer", paramType = "query")
+    })
+    public ResponseData<Wiki_Animation> modifyAnimation(@RequestBody Wiki_Animation animation,@RequestParam Integer userId) {
+        Integer success = animationService.modifyAnimationInfo(animation,userId);
         return ResponseData.success().putDataVule("success",success)
                 .putDataVule("animation",animation);
     }
@@ -235,6 +238,39 @@ public class AnimationController {
         Integer success = animationService.deleteAnimation(id);
         return ResponseData.success().putDataVule("success",success)
                 .putDataVule("animation",animation);
+    }
+
+    @GetMapping("/getReportList")
+    @ApiOperation(value = "获取举报列表",notes = "获取未处理的举报列表")
+    public ResponseData<Wiki_Report> reportList(){
+        List<Wiki_Report> reports=reportService.getUntreated();
+        if (reports != null) {
+            return ResponseData.success().putDataVule("untreatedList", reports);
+        } else {
+            return ResponseData.serverInternalError();
+        }
+    }
+
+    @GetMapping("/getReportPage")
+    @ApiOperation(value = "分页获取举报列表",notes = "分页获取举报列表")
+    @ApiImplicitParams({
+            @ApiImplicitParam(value="pageNum",name="pageNum",required = true, dataType = "Integer", paramType = "query"),
+            @ApiImplicitParam(value="pageSize",name="pageSize",required = true, dataType = "Integer", paramType = "query")
+    })
+    public ResponseData<Wiki_Report> reportPage(@RequestParam Integer pageNum,@RequestParam Integer pageSize){
+        IPage<Wiki_Report> reportIPage=reportService.getUntreatedPage(pageNum,pageSize);
+        return ResponseData.success().putDataVule("total", reportIPage.getTotal())
+                .putDataVule("pages", reportIPage.getPages())
+                .putDataVule("animList", reportIPage.getRecords());
+    }
+
+    @PostMapping("/report")
+    @ApiOperation(value = "举报动漫",notes = "对动漫进行举报")
+    @ApiImplicitParam(value = "举报信息",name="report",required = true,dataType = "Wiki_Report",paramType = "body")
+    public ResponseData<Wiki_Report> reportAnimation(@RequestBody Wiki_Report report){
+        Integer success = reportService.reportAnimation(report);
+        return ResponseData.success().putDataVule("success", success)
+                .putDataVule("report", report);
     }
 }
 
