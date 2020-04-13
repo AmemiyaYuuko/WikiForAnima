@@ -1,4 +1,6 @@
-E:\WikiProject\Wiki\wiki_common_interface\src\main\java\org\wiki\service\IReportService.java
-E:\WikiProject\Wiki\wiki_common_interface\src\main\java\org\wiki\service\IBrandService.java
-E:\WikiProject\Wiki\wiki_common_interface\src\main\java\org\wiki\service\IHistoryService.java
-E:\WikiProject\Wiki\wiki_common_interface\src\main\java\org\wiki\service\IAnimationService.java
+D:\桌面\项目\WikiForAnima\wiki_common_interface\src\main\java\org\wiki\service\IUserService.java
+D:\桌面\项目\WikiForAnima\wiki_common_interface\src\main\java\org\wiki\service\IAdminService.java
+D:\桌面\项目\WikiForAnima\wiki_common_interface\src\main\java\org\wiki\service\IAnimationService.java
+D:\桌面\项目\WikiForAnima\wiki_common_interface\src\main\java\org\wiki\service\IReportService.java
+D:\桌面\项目\WikiForAnima\wiki_common_interface\src\main\java\org\wiki\service\IHistoryService.java
+D:\桌面\项目\WikiForAnima\wiki_common_interface\src\main\java\org\wiki\service\IBrandService.java

@@ -1,5 +1,5 @@
-E:\WikiProject\Wiki\wiki_common_web\src\main\java\org\wiki\controller\baseException.java
-E:\WikiProject\Wiki\wiki_common_web\src\main\java\org\wiki\utils\HeaderTokenInterceptor.java
-E:\WikiProject\Wiki\wiki_common_web\src\main\java\org\wiki\utils\HttpInterceptor.java
-E:\WikiProject\Wiki\wiki_common_web\src\main\java\org\wiki\utils\JWTUtils.java
-E:\WikiProject\Wiki\wiki_common_web\src\main\java\org\wiki\config\swaggerConfig.java
+D:\桌面\项目\WikiForAnima\wiki_common_web\src\main\java\org\wiki\utils\HttpInterceptor.java
+D:\桌面\项目\WikiForAnima\wiki_common_web\src\main\java\org\wiki\utils\HeaderTokenInterceptor.java
+D:\桌面\项目\WikiForAnima\wiki_common_web\src\main\java\org\wiki\utils\JWTUtils.java
+D:\桌面\项目\WikiForAnima\wiki_common_web\src\main\java\org\wiki\config\swaggerConfig.java
+D:\桌面\项目\WikiForAnima\wiki_common_web\src\main\java\org\wiki\controller\baseException.java

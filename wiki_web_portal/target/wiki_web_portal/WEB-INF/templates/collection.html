@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table  border="1" width="70%" align="center">
+    <thead>
+    <tr>
+        <th>动漫ID</th>
+        <th>动漫名称</th>
+        <th>图片</th>
+        <th>用户Id</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="collection:${collections}">
+            <td th:text="${collection.animationId}"></td>
+            <td th:text="${collection.animationName}"></td>
+            <td >
+                <img th:src="${collection.animationImg}" >
+            </td>
+            <td th:text="${collection.userId}"></td>
+            <td>
+                <a th:href="@{'/wiki/user/deleteCollection/'+${collection.userId} +'/'+${collection.animationId}}">删除</a>
+            </td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
+</body>
+</html>

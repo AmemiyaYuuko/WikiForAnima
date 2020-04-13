@@ -92,13 +92,20 @@ public class AnimationServiceImpl implements IAnimationService {
 
     @Override
     public Integer modifyAnimationInfo(Wiki_Animation animation,Integer userId) {
-        AnimationHistory history=new AnimationHistory(animation.getAnimationId(),animation.getAnimationName(),
-                animation.getAnimationLabel(),animation.getAnimationTime(),animation.getAnimationImg(),
-                animation.getAnimationLink(),animation.getAnimationVoiceactor(),animation.getAnimationIntroduce(),
-                animation.getAnimationStaff(),userId,new Date());
+        AnimationHistory history=new AnimationHistory();
+        history.setAnimationId(animation.getAnimationId());
+        history.setAnimationImg(animation.getAnimationImg());
+        history.setAnimationIntroduce(animation.getAnimationIntroduce());
+        history.setAnimationLabel(animation.getAnimationLabel());
+        history.setAnimationLink(animation.getAnimationLink());
+        history.setAnimationName(animation.getAnimationName());
+        history.setAnimationStaff(animation.getAnimationStaff());
+        history.setAnimationStatus(animation.getAnimationStatus());
+        history.setAnimationTime(animation.getAnimationTime());
+        history.setAnimationVoiceactor(animation.getAnimationVoiceactor());
+        history.setChangeTime(new Date());
+        history.setUserId(userId);
         Integer success=0;
-        System.out.println(history);
-        System.out.println(historyService);
         success=historyService.insertAnimationHistory(history);
         if(success==1){
             success=animationMapper.updateById(animation);

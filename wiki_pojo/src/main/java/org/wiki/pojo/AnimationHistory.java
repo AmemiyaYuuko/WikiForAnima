@@ -26,23 +26,4 @@ public class AnimationHistory implements Serializable {
     private Integer animationStatus;
     private String animationIntroduce;
     private String animationStaff;
-
-
-    public AnimationHistory(Integer animationId, String animationName, String animationLabel,
-                            Date animationTime, String animationImg, String animationLink,
-                            String animationVoiceactor, String animationIntroduce,
-                            String animationStaff, Integer userId, Date date) {
-        this.historyId=0;
-        this.animationId=animationId;
-        this.animationName=animationName;
-        this.animationLabel=animationLabel;
-        this.animationTime=animationTime;
-        this.animationImg=animationImg;
-        this.animationLink=animationLink;
-        this.animationVoiceactor=animationVoiceactor;
-        this.animationIntroduce=animationIntroduce;
-        this.animationStaff=animationStaff;
-        this.userId=userId;
-        this.changeTime=date;
-    }
 }

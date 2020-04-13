@@ -1,3 +1,5 @@
+org\wiki\service\IUserService.class
+org\wiki\service\IAdminService.class
 org\wiki\service\IHistoryService.class
 org\wiki\service\IBrandService.class
 org\wiki\service\IAnimationService.class

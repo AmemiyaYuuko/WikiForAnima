@@ -1,0 +1,3 @@
+org\wiki\mapper\UserMapper.class
+org\wiki\serviceimpl\UserServiceImpl.class
+org\wiki\mapper\CollectionMapper.class

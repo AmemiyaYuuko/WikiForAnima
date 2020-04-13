@@ -37,7 +37,7 @@
                 <version>2.2</version>
                 <configuration>
                     <!-- 指定端口 service端采用990*的格式-->
-                    <port>9902</port>
+                    <port>9901</port>
                     <!-- 请求路径 -->
                     <path>/</path>
                 </configuration>

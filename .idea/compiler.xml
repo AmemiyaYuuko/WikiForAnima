@@ -7,23 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="wiki_web_portal" />
-        <module name="wiki_web_center" />
-        <module name="wiki_web_history" />
-        <module name="wiki_common_service" />
-        <module name="wiki_common_interface" />
-        <module name="wiki_common" />
-        <module name="wiki_web_manager" />
         <module name="wiki_common_cas" />
-        <module name="wiki_common_web" />
-        <module name="wiki_service_history" />
+        <module name="wiki_common_interface" />
+        <module name="wiki_service_user" />
+        <module name="wiki_web_center" />
+        <module name="wiki_common" />
+        <module name="wiki_common_service" />
         <module name="wiki_service_animation" />
-        <module name="wiki_service_goods" />
         <module name="wiki_pojo" />
+        <module name="wiki_service_history" />
+        <module name="wiki_web_history" />
+        <module name="wiki_web_manager" />
+        <module name="wiki_common_web" />
+        <module name="wiki_service_goods" />
+        <module name="wiki_service_system" />
+        <module name="wiki_web_portal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="wiki_web_protal" target="8" />
+      <module name="wiki_web_user" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

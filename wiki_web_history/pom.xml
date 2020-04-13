@@ -40,7 +40,7 @@
         <version>2.2</version>
         <configuration>
           <!-- 指定端口 web端采用900*的格式-->
-          <port>9046</port>
+          <port>9002</port>
           <!-- 请求路径 -->
           <path>/</path>
         </configuration>

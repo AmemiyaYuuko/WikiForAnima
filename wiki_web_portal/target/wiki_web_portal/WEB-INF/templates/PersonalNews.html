@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{'/wiki/user/update/'+${user.id}}" action="" method="post">
+    用户名：<input type="text" value="" th:field="${user.name}" name="name">
+    <input type="hidden" value="" th:field="${user.password}" name="password"><br><br>
+    年龄：<input type="text" value="" th:field="${user.age}" name="age"><br><br>
+    性别：<input type="text" value="" th:field="${user.sex}" name="sex"><br><br>
+    邮箱：<input type="text" value="" th:field="${user.email}" name="email"><br><br>
+    <input type="hidden" value="" th:field="${user.status}" name="status">
+    图像：<input type="text" value="" th:field="${user.img}" name="img"><br><br>
+    <input type="submit" value="更新">
+</form>
+<a th:href="@{'/wiki/user/selectCollection/'+${user.id}}">查看收藏</a>
+<span th:text="${msg}"></span>
+
+</body>
+</html>

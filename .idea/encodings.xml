@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/wiki_common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common_cas/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common_cas/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common_interface/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/wiki_common_interface/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/wiki_common_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common_web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_common_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_pojo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/wiki_pojo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_service_animation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_service_animation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_service_goods/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_service_goods/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_service_history/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_service_history/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/wiki_web_center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wiki_service_system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wiki_service_system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wiki_service_user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wiki_service_user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_web_center/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_web_history/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wiki_web_history/src/main/resources" charset="UTF-8" />

@@ -5,11 +5,14 @@
     <file type="web" url="file://$PROJECT_DIR$/wiki_service_animation" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_service_goods" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_service_history" />
+    <file type="web" url="file://$PROJECT_DIR$/wiki_service_system" />
+    <file type="web" url="file://$PROJECT_DIR$/wiki_service_user" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_web_center" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_web_history" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_web_manager" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_web_portal" />
     <file type="web" url="file://$PROJECT_DIR$/wiki_web_protal" />
+    <file type="web" url="file://$PROJECT_DIR$/wiki_web_user" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -20,6 +23,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/wiki_web_protal/pom.xml" />
+        <option value="$PROJECT_DIR$/wiki_web_user/pom.xml" />
       </set>
     </option>
   </component>
